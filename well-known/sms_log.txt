@@ -1,0 +1,292 @@
+[2025-01-29 05:18:50] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+We have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:18 for your policy number PYB209000020. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 05:18:50] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000020
+)
+
+[2025-01-29 05:18:50] Request URL: Data: Array
+(
+    [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A18+for+your+policy+number+PYB209000020.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000020&category=OnlinePayment
+)
+
+[2025-01-29 05:18:52] API Response Details: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":365,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\nWe have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:18 for your policy number PYB209000020. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738124184997","policyNo":"PYB209000020","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:16:26.438+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:16:26.438+00:00"}
+    [error] => 
+    [curlInfo] => Array
+        (
+            [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A18+for+your+policy+number+PYB209000020.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000020&category=OnlinePayment
+            [content_type] => application/json
+            [http_code] => 200
+            [header_size] => 203
+            [request_size] => 543
+            [filetime] => -1
+            [ssl_verify_result] => 0
+            [redirect_count] => 0
+            [total_time] => 1.610385
+            [namelookup_time] => 0.000311
+            [connect_time] => 0.030387
+            [pretransfer_time] => 0.031516
+            [size_upload] => 0
+            [size_download] => 643
+            [speed_download] => 399
+            [speed_upload] => 0
+            [download_content_length] => -1
+            [upload_content_length] => 0
+            [starttransfer_time] => 1.555164
+            [redirect_time] => 0
+            [redirect_url] => 
+            [primary_ip] => 124.43.209.65
+            [certinfo] => Array
+                (
+                )
+
+            [primary_port] => 8082
+            [local_ip] => 172.21.112.137
+            [local_port] => 59704
+            [http_version] => 2
+            [protocol] => 1
+            [ssl_verifyresult] => 0
+            [scheme] => HTTP
+            [appconnect_time_us] => 0
+            [connect_time_us] => 30387
+            [namelookup_time_us] => 311
+            [pretransfer_time_us] => 31516
+            [redirect_time_us] => 0
+            [starttransfer_time_us] => 1555164
+            [total_time_us] => 1610385
+            [effective_method] => POST
+        )
+
+)
+
+[2025-01-29 05:21:14] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+
+We have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:21 for your policy number PYB209000021. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 05:21:14] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000021
+)
+
+[2025-01-29 05:21:14] Request URL: Data: Array
+(
+    [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0A%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A21+for+your+policy+number+PYB209000021.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0A%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000021&category=OnlinePayment
+)
+
+[2025-01-29 05:21:15] API Response Details: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":366,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\n\\\\nWe have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:21 for your policy number PYB209000021. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\n\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738124328704","policyNo":"PYB209000021","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:18:50.072+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:18:50.072+00:00"}
+    [error] => 
+    [curlInfo] => Array
+        (
+            [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0A%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A21+for+your+policy+number+PYB209000021.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0A%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000021&category=OnlinePayment
+            [content_type] => application/json
+            [http_code] => 200
+            [header_size] => 203
+            [request_size] => 549
+            [filetime] => -1
+            [ssl_verify_result] => 0
+            [redirect_count] => 0
+            [total_time] => 1.540176
+            [namelookup_time] => 0.000676
+            [connect_time] => 0.076259
+            [pretransfer_time] => 0.077184
+            [size_upload] => 0
+            [size_download] => 653
+            [speed_download] => 423
+            [speed_upload] => 0
+            [download_content_length] => -1
+            [upload_content_length] => 0
+            [starttransfer_time] => 1.503801
+            [redirect_time] => 0
+            [redirect_url] => 
+            [primary_ip] => 124.43.209.65
+            [certinfo] => Array
+                (
+                )
+
+            [primary_port] => 8082
+            [local_ip] => 172.21.112.137
+            [local_port] => 59748
+            [http_version] => 2
+            [protocol] => 1
+            [ssl_verifyresult] => 0
+            [scheme] => HTTP
+            [appconnect_time_us] => 0
+            [connect_time_us] => 76259
+            [namelookup_time_us] => 676
+            [pretransfer_time_us] => 77184
+            [redirect_time_us] => 0
+            [starttransfer_time_us] => 1503801
+            [total_time_us] => 1540176
+            [effective_method] => POST
+        )
+
+)
+
+[2025-01-29 05:23:27] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+
+We have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:23 for your policy number PYB209000020. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 05:23:27] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000020
+)
+
+[2025-01-29 05:23:27] Request URL: Data: Array
+(
+    [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0A%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A23+for+your+policy+number+PYB209000020.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0A%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000020&category=OnlinePayment
+)
+
+[2025-01-29 05:23:28] API Response Details: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":367,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\n\\\\nWe have received a payment of Rs. 2,210.00 on 2025-01-29 at 05:23 for your policy number PYB209000020. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\n\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738124461886","policyNo":"PYB209000020","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:21:03.047+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:21:03.047+00:00"}
+    [error] => 
+    [curlInfo] => Array
+        (
+            [url] => http://124.43.209.65:8082/dialog-sms/save?phoneNo=0764799660&message=Dear+Valued+Customer%2C%0A%0AWe+have+received+a+payment+of+Rs.+2%2C210.00+on+2025-01-29+at+05%3A23+for+your+policy+number+PYB209000020.+The+payment+will+be+updated+in+our+system+within+one+working+day.%0AFor+any+assistance%2C+please+feel+free+to+contact+us+at+0112557300.%0A%0AThank+you+for+choosing+Co-operative+Insurance+company+PLC.&policyNo=PYB209000020&category=OnlinePayment
+            [content_type] => application/json
+            [http_code] => 200
+            [header_size] => 203
+            [request_size] => 549
+            [filetime] => -1
+            [ssl_verify_result] => 0
+            [redirect_count] => 0
+            [total_time] => 1.303619
+            [namelookup_time] => 0.000314
+            [connect_time] => 0.043322
+            [pretransfer_time] => 0.044708
+            [size_upload] => 0
+            [size_download] => 653
+            [speed_download] => 500
+            [speed_upload] => 0
+            [download_content_length] => -1
+            [upload_content_length] => 0
+            [starttransfer_time] => 1.268868
+            [redirect_time] => 0
+            [redirect_url] => 
+            [primary_ip] => 124.43.209.65
+            [certinfo] => Array
+                (
+                )
+
+            [primary_port] => 8082
+            [local_ip] => 172.21.112.137
+            [local_port] => 59805
+            [http_version] => 2
+            [protocol] => 1
+            [ssl_verifyresult] => 0
+            [scheme] => HTTP
+            [appconnect_time_us] => 0
+            [connect_time_us] => 43322
+            [namelookup_time_us] => 314
+            [pretransfer_time_us] => 44708
+            [redirect_time_us] => 0
+            [starttransfer_time_us] => 1268868
+            [total_time_us] => 1303619
+            [effective_method] => POST
+        )
+
+)
+
+[2025-01-29 10:02:38] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+
+We have received a payment of Rs. 2,210.00 on 2025-01-29 at 10:02 for your policy number PYB209000020. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 10:02:38] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000020
+    [currentTime] => 2025-01-29 10:02:38
+)
+
+[2025-01-29 10:02:40] API Response: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":368,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\n\\\\nWe have received a payment of Rs. 2,210.00 on 2025-01-29 at 10:02 for your policy number PYB209000020. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\n\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738125012853","policyNo":"PYB209000020","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:30:14.916+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:30:14.916+00:00"}
+    [error] => 
+    [time] => 2025-01-29 10:02:40
+)
+
+[2025-01-29 10:05:50] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+
+We have received a payment of Rs. 89.00 on 2025-01-29 at 10:05 for your policy number PYB209000023. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 10:05:50] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000023
+    [currentTime] => 2025-01-29 10:05:50
+)
+
+[2025-01-29 10:05:51] API Response: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":369,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\n\\\\nWe have received a payment of Rs. 89.00 on 2025-01-29 at 10:05 for your policy number PYB209000023. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\n\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738125204632","policyNo":"PYB209000023","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:33:25.818+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:33:25.818+00:00"}
+    [error] => 
+    [time] => 2025-01-29 10:05:51
+)
+
+[2025-01-29 10:07:34] Formatted message: Data: Array
+(
+    [message] => Dear Valued Customer,
+
+We have received a payment of Rs. 130.00 on 2025-01-29 at 10:07 for your policy number PYB209000020. The payment will be updated in our system within one working day.
+For any assistance, please feel free to contact us at 0112557300.
+
+Thank you for choosing Co-operative Insurance company PLC.
+)
+
+[2025-01-29 10:07:34] Attempting to send SMS Data: Array
+(
+    [phoneNo] => 0764799660
+    [policyNo] => PYB209000020
+    [currentTime] => 2025-01-29 10:07:34
+)
+
+[2025-01-29 10:07:36] API Response: Data: Array
+(
+    [httpCode] => 200
+    [response] => {"id":370,"phoneNo":"0764799660","message":"Dear Valued Customer,\\\\n\\\\nWe have received a payment of Rs. 130.00 on 2025-01-29 at 10:07 for your policy number PYB209000020. The payment will be updated in our system within one working day.\\\\nFor any assistance, please feel free to contact us at 0112557300.\\\\n\\\\nThank you for choosing Co-operative Insurance company PLC.","transactionId":"1738125308864","policyNo":"PYB209000020","category":"OnlinePayment","successCode":"success","completeCode":"pending","createdBy":null,"createdDateTime":"2025-01-29T04:35:10.071+00:00","modifiedBy":null,"modifiedDateTime":"2025-01-29T04:35:10.071+00:00"}
+    [error] => 
+    [time] => 2025-01-29 10:07:36
+)
+

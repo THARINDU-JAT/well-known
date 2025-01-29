@@ -1,0 +1,152 @@
+<?php
+session_start();
+if($_SESSION["TID"] == $_REQUEST["transaction_id"]){
+    
+    
+}else{
+    $_SESSION["TID"] = $_REQUEST["transaction_id"];
+
+include ('security.php');
+include("dbconn.php");
+include('wellness_controller.php');
+include 'sendsms.php';
+
+$db = new DatabaseConnection;
+
+$selector = $_REQUEST["req_reference_number"];
+$selector = substr($selector, 0, 1);
+
+$wplan = new wellness_controller;
+
+
+if($selector == "W"){
+
+  $sms_text = "Thank you for joining WELLNESS PLUS.You will receive your policy document in due course.";
+
+ $updData = [
+     'wp_order_id'                           => mysqli_real_escape_string($db->conn,$_REQUEST["req_reference_number"]),
+     'transaction_id'                        => mysqli_real_escape_string($db->conn,$_REQUEST["transaction_id"]),
+     'payer_authentication_transaction_id'   => mysqli_real_escape_string($db->conn,$_REQUEST["payer_authentication_transaction_id"]),
+     'auth_code'                             => mysqli_real_escape_string($db->conn,$_REQUEST["auth_code"]),
+     'message'                               => mysqli_real_escape_string($db->conn,$_REQUEST["message"]),
+     'req_transaction_uuid'                  => mysqli_real_escape_string($db->conn,$_REQUEST["req_transaction_uuid"]),
+     'auth_reconciliation_reference_number'  => mysqli_real_escape_string($db->conn,$_REQUEST["auth_reconciliation_reference_number"]),
+     'wp_payment_status'                     => mysqli_real_escape_string($db->conn,$_REQUEST["decision"]),
+             ];
+             
+    //echo "<pre>";
+   // print_r($updData);
+
+  $result = $wplan->update_pay_status($updData);
+
+    if($_REQUEST["decision"] == "ACCEPT"){
+        $wmobile_no = $wplan->getWellnessMobile(trim($_REQUEST["req_reference_number"])); 
+        $sms_order_id = $wplan->getNewSMSid($wmobile_no);
+        $sms =new sendsms();
+        $sms->send($wmobile_no,$sms_order_id,$sms_text);
+   }     
+
+}
+
+if($selector == "T"){
+
+    $sms_text = "Thank you for your payment for Policy Renewal. Co-operative Insurance PLC";
+
+    $updData = [
+        'op_order_id'                           => mysqli_real_escape_string($db->conn,$_REQUEST["req_reference_number"]),
+        'transaction_id'                        => mysqli_real_escape_string($db->conn,$_REQUEST["transaction_id"]),
+        'payer_authentication_transaction_id'   => mysqli_real_escape_string($db->conn,$_REQUEST["payer_authentication_transaction_id"]),
+        'auth_code'                             => mysqli_real_escape_string($db->conn,$_REQUEST["auth_code"]),
+        'message'                               => mysqli_real_escape_string($db->conn,$_REQUEST["message"]),
+        'req_transaction_uuid'                  => mysqli_real_escape_string($db->conn,$_REQUEST["req_transaction_uuid"]),
+        'auth_reconciliation_reference_number'  => mysqli_real_escape_string($db->conn,$_REQUEST["auth_reconciliation_reference_number"]),
+        'op_payment_status'                     => mysqli_real_escape_string($db->conn,$_REQUEST["decision"]),
+                ];
+
+
+  $result = $wplan->update_tgpolicy_status($updData);
+    
+     if($_REQUEST["decision"] == "ACCEPT"){
+       $wmobile_no      = $wplan->getTGMobile(trim($_REQUEST["req_reference_number"]));
+       $policy_no       = $wplan->getTGPolicyNo(trim($_REQUEST["req_reference_number"]));
+       $seqNo           = $wplan->getTGSeqNo(trim($_REQUEST["req_reference_number"]));
+       $sms_order_id    = $wplan->getNewSMSid($wmobile_no);
+       $sms =new sendsms();
+       $sms->send($wmobile_no,$sms_order_id,$sms_text);
+       
+       $auth_amount = $_REQUEST["auth_amount"];
+       
+        $url_log = "http://34.87.118.90:8082/online-general/pay?policyNo=".$policy_no."&amount=".$auth_amount."&orderId=".$seqNo."";
+        $curl = curl_init($url_log);
+        $response = curl_exec($curl);
+        curl_close($curl);
+      //  echo $response;
+        
+        echo "Thank you for the payment...";
+   }   
+
+
+}
+
+if($selector == "G"){
+
+      $sms_text = "Thank you for your payment. Co-operative Insurance PLC";
+
+      $updData = [
+        'op_order_id'                           => mysqli_real_escape_string($db->conn,$_REQUEST["req_reference_number"]),
+        'transaction_id'                        => mysqli_real_escape_string($db->conn,$_REQUEST["transaction_id"]),
+        'payer_authentication_transaction_id'   => mysqli_real_escape_string($db->conn,$_REQUEST["payer_authentication_transaction_id"]),
+        'auth_code'                             => mysqli_real_escape_string($db->conn,$_REQUEST["auth_code"]),
+        'message'                               => mysqli_real_escape_string($db->conn,$_REQUEST["message"]),
+        'req_transaction_uuid'                  => mysqli_real_escape_string($db->conn,$_REQUEST["req_transaction_uuid"]),
+        'auth_reconciliation_reference_number'  => mysqli_real_escape_string($db->conn,$_REQUEST["auth_reconciliation_reference_number"]),
+        'op_payment_status'                     => mysqli_real_escape_string($db->conn,$_REQUEST["decision"]),
+                ];
+
+
+  $result = $wplan->update_tgpolicy_status($updData);
+    
+     if($_REQUEST["decision"] == "ACCEPT"){
+       $wmobile_no      = $wplan->getTGMobile(trim($_REQUEST["req_reference_number"]));
+       $policy_no       = $wplan->getTGPolicyNo(trim($_REQUEST["req_reference_number"]));
+       $seqNo           = $wplan->getTGSeqNo(trim($_REQUEST["req_reference_number"]));
+       $sms_order_id    = $wplan->getNewSMSid($wmobile_no);
+       $sms =new sendsms();
+       $sms->send($wmobile_no,$sms_order_id,$sms_text);
+       
+       $auth_amount = $_REQUEST["auth_amount"];
+       
+        $url_log = "http://34.87.118.90:8082/online-general/pay?policyNo=".$policy_no."&amount=".$auth_amount."&orderId=".$seqNo."";
+        $curl = curl_init($url_log);
+        $response = curl_exec($curl);
+        curl_close($curl);
+       // echo $response;
+       
+       echo "Thank you for the payment...";
+   } 
+
+
+}
+
+}// edn if
+
+?>
+
+
+            <?php
+                //  foreach($_REQUEST as $name => $value) {
+                //      $params[$name] = $value;
+                //      echo "<span>" . $name . "</span><input type=\"text\" name=\"" . $name . "\" size=\"50\" value=\"" . $value . "\" readonly=\"true\"/><br/>";
+                //  }
+               //  echo "<pre>";
+                //print_r($_REQUEST);
+
+                //  echo "<span>Signature Verified:</span><input type=\"text\" name=\"verified\" size=\"50\" value=\"";
+                //  if (strcmp($params["signature"], sign($params))==0) {
+                //      echo "True";
+                //  } else {
+                //      echo "False";
+                //  }
+                //  echo "\" readonly=\"true\"/><br/>";
+            ?>
+
